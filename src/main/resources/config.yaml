@@ -1,0 +1,15 @@
+api:
+  port: 3001
+
+oauth2:
+  keycloak:
+    site: http://localhost:8085/auth/realms/poc-realm
+    clientId: poc-vertx-client
+    clientSecret: {your-secret}
+    tokenPath: /protocol/openid-connect/token
+    jwkPath: /protocol/openid-connect/certs
+    logoutPath: /protocol/openid-connect/logout
+    userInfoPath: /protocol/openid-connect/userinfo
+    introspectionPath: /protocol/openid-connect/token/introspect
+    callbackPath: http://localhost:3000/callback
+    scopes: openid
