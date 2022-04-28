@@ -67,11 +67,22 @@ The poc have a little ABM for books that work with the following endpoints:
 
 ``POST /book``  Create a new book, this endpoints need to have the authorization token for authorize the operation
 
+## How to run with -conf from the IDE?
+
+
+Create a new application with main class
+
+```io.github.riojano0.pocvertxkeycloak.AppLauncher```
+
+and in cli arguments fill with
+
+```run io.github.riojano0.pocvertxkeycloak.MainVerticle -conf {your-file}```
+
 
 ## Consideration about override properties from fat-jar using the flag "-conf"
 
-Currently, vertx only support properties of type .json I generate a PR with a work-around https://github.com/eclipse-vertx/vert.x/pull/4340 
-but for you to remember if you want to override some property injection that configuration on the fat-jar, only is supported json files and not other yaml files
+Currently, vertx only support properties of type .json Was extended the RunCommand following this work-around https://github.com/eclipse-vertx/vert.x/pull/4340 
+but for you to remember if you want to override some property injection that configuration on the fat-jar, only is supported json files and not other yaml files (without the work-around)
 
 Eg:
 
